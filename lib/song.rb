@@ -14,7 +14,7 @@ class Song
     @@count
   end
 
-  def self.genres
+  def self.genre
     @@genres
   end
 
@@ -25,5 +25,8 @@ class Song
   def self.genre_count
     new_array = self.genres.count
     return new_array.length
+
+  def self.artist_count
+    new_array
   end
 end
