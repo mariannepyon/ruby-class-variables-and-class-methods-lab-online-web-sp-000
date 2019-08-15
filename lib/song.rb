@@ -34,13 +34,10 @@ class Song
 
 @@artists = []
 
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ; total}
+  end
+
   def self.artists
     @@artists.uniq
   end
-
-  def self.artist_count
-    new_array = self.artist_count
-    return new_array.length
-  end
-  end
-end
